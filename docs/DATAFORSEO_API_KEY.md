@@ -1,12 +1,14 @@
 # DataForSEO API Key Setup
 
-OpenSEO uses [DataForSEO](https://dataforseo.com/?aff=255379) to fetch SEO data. It's a pay-as-you-go third-party service unaffiliated with OpenSEO. You need an API key to connect OpenSEO to it.
+> Customer install steps for this copy are in [INSTALL.md](./INSTALL.md). Transformaiton.com is not affiliated with DataForSEO or with the original OpenSEO authors.
+
+OpenSEO uses [DataForSEO](https://dataforseo.com/) to fetch SEO data. DataForSEO is a separate company. You pay DataForSEO for the lookups. You need an API key to connect OpenSEO to it.
 
 New DataForSEO accounts include $1 of free credit to test with, and the minimum top-up is $50.
 
 ## Get your API key
 
-1. Go to [DataForSEO API Access](https://app.dataforseo.com/api-access?aff=255379) (create an account if you don't have one).
+1. Go to [DataForSEO API Access](https://app.dataforseo.com/api-access) (create an account if you don't have one).
 2. Copy the API credential labelled "Base64" from the API Access page. This is the base64 encoded value of your DataForSEO email and API password in the format `email:password`.
 
 ## Where to set it

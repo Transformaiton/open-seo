@@ -4,7 +4,7 @@ Day-to-day tasks after [initial setup](./SELF_HOSTING_CLOUDFLARE.md): connect th
 
 ## Connect the MCP server
 
-With password accounts (`AUTH_MODE=password`, the default for new deployments), MCP clients connect to `https://YOUR_WORKER_HOSTNAME/mcp` and sign in with your OpenSEO account, exactly as they connect to the hosted service; nothing needs to be enabled in Cloudflare. Follow the [MCP setup guide](https://openseo.so/docs/mcp) with your Worker URL in place of the hosted one.
+With password accounts (`AUTH_MODE=password`, the default for new deployments), MCP clients connect to `https://YOUR_WORKER_HOSTNAME/mcp` and sign in with an account on this installation. Nothing needs to be enabled in Cloudflare. See [Usage](./USAGE.md#connect-an-ai-assistant).
 
 ### Through Cloudflare Access
 
@@ -63,7 +63,7 @@ Everyone shares the `shared-workspace` organization; the command makes the user 
 
 ## AI visibility tracking
 
-AI Visibility uses your `DATAFORSEO_API_KEY`; tracked questions are sent to DataForSEO and billed directly by the provider. Set `OPENROUTER_API_KEY` for setup research, Prompt Research, and generated prompt suggestions. Deployment configures background collection and a five-minute cron that dispatches due daily, weekly, or monthly checks. The app shows the collection cost before a check or schedule starts. See the [AI Visibility guide](https://openseo.so/docs/ai-visibility).
+AI Visibility uses your `DATAFORSEO_API_KEY`; tracked questions are sent to DataForSEO and billed directly by the provider. Set `OPENROUTER_API_KEY` for setup research, Prompt Research, and generated prompt suggestions. Deployment configures background collection and a five-minute cron that dispatches due daily, weekly, or monthly checks. The app shows the collection cost before a check or schedule starts. You pay DataForSEO for those checks. Open **Prompt Tracking** in the sidebar to run them.
 
 ## Render JavaScript in site audits
 

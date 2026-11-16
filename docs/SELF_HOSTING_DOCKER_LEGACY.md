@@ -1,5 +1,7 @@
 # Docker Self-Hosting: older single-container image
 
+> New installs should follow [INSTALL.md](./INSTALL.md). This page is only for the older image. Transformaiton.com is not affiliated with the original authors. See [Credits](../README.md#credits).
+
 This guide covers the older image, `ghcr.io/every-app/open-seo`, which builds the app each time it starts and runs without sign-in. It keeps getting updates, so existing installations keep working. New installations should use the [current Docker setup](./SELF_HOSTING_DOCKER.md), which starts in seconds and has accounts; existing ones can [move to it with their data](./SELF_HOSTING_DOCKER.md#move-from-the-old-docker-image).
 
 In Docker mode, OpenSEO uses `AUTH_MODE=local_noauth` (no auth checks, local admin user `admin@localhost`). Only expose it behind your own auth-protected reverse proxy, tunnel, or private network.
@@ -34,7 +36,7 @@ Optional env values:
 - `AUTH_MODE=local_noauth` (already set in compose)
 - `OPEN_SEO_IMAGE` (defaults to `ghcr.io/every-app/open-seo:latest`)
 
-AI Visibility uses your `DATAFORSEO_API_KEY` and sends tracked questions to DataForSEO. Set `OPENROUTER_API_KEY` for setup research, Prompt Research, and generated prompt suggestions. You pay providers directly; the app shows the collection cost before a check or schedule starts. Keep the container running for background answers and daily, weekly, or monthly tracking. The built-in scheduler checks for due work every five minutes; no host cron setup is required. See the [AI Visibility guide](https://openseo.so/docs/ai-visibility).
+AI Visibility uses your `DATAFORSEO_API_KEY` and sends tracked questions to DataForSEO. Set `OPENROUTER_API_KEY` for setup research, Prompt Research, and generated prompt suggestions. You pay providers directly; the app shows the collection cost before a check or schedule starts. Keep the container running for background answers and daily, weekly, or monthly tracking. The built-in scheduler checks for due work every five minutes; no host cron setup is required. Prompt Tracking in the app is the screen for this, and [Usage](./USAGE.md) describes what a lookup costs on this install.
 
 If you are putting Docker behind a reverse proxy or a temporary tunnel, remember that Docker self-hosting runs with app auth disabled. Only expose it behind your own auth-protected reverse proxy, tunnel, or private network, and add the public hostname before restarting:
 
