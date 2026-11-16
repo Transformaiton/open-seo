@@ -1,6 +1,8 @@
 # Docker Self-Hosting
 
-Run OpenSEO on your own server or computer with Docker Compose. The image is prebuilt (`ghcr.io/every-app/open-seo-standalone`), so OpenSEO is ready a few seconds after it starts. You sign in with email and password accounts: the first visitor creates the administrator's account and teammates join from invitation links. You pay DataForSEO, OpenRouter and any rendering provider directly.
+> This guide is part of [Open SEO by Transformaiton.com](../README.md). The shorter business install is [INSTALL.md](./INSTALL.md). Transformaiton.com is not affiliated with, and is not endorsed by, the original authors. See [Credits](../README.md#credits).
+
+Run OpenSEO on your own server or computer with Docker Compose. The image is prebuilt (`ghcr.io/every-app/open-seo-standalone`, published by the original project), so OpenSEO is ready a few seconds after it starts. You sign in with email and password accounts: the first visitor creates the administrator's account and teammates join from invitation links. You pay DataForSEO, OpenRouter and any rendering provider directly.
 
 Already running the older single-container image (`ghcr.io/every-app/open-seo`)? It keeps getting updates. When you are ready, [move to this setup](#move-from-the-old-docker-image); your data comes with you.
 
@@ -9,7 +11,7 @@ Already running the older single-container image (`ghcr.io/every-app/open-seo`)?
 You need Docker Engine or Docker Desktop with Compose, at least 4 GiB of memory for Docker, and a [DataForSEO API key](./DATAFORSEO_API_KEY.md). Every command below runs from the repository root:
 
 ```sh
-git clone https://github.com/every-app/open-seo.git
+git clone https://github.com/Transformaiton/open-seo.git
 cd open-seo
 export COMPOSE_FILE=deploy/standalone/compose.yaml
 cp deploy/standalone/.env.example deploy/standalone/.env

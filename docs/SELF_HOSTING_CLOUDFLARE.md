@@ -1,5 +1,7 @@
 # Cloudflare Self-Hosting
 
+> This guide is part of [Open SEO by Transformaiton.com](../README.md). The shorter business install is [INSTALL.md](./INSTALL.md). Transformaiton.com is not affiliated with, and is not endorsed by, the original authors. See [Credits](../README.md#credits).
+
 Host OpenSEO on Cloudflare for internet-facing self-hosting across multiple devices or with your team. One deploy command provisions everything. Works on Cloudflare's free plan, with [limits](#workers-free-plan-limits): site audits stop at about 40 pages.
 
 You sign in with email and password accounts: the first visitor creates the administrator's account, teammates join from invitation links, and MCP clients (Claude, ChatGPT, Codex, Cursor) sign in with the same accounts, with nothing to set up in Cloudflare. The most secure option is to put [Cloudflare Access](#cloudflare-access-the-most-secure-option) in front of the app instead, so Cloudflare checks every request before it reaches OpenSEO. It takes more setup.
@@ -16,21 +18,12 @@ Related guides:
 - **A workers.dev subdomain.** A new account has none until you open `Workers & Pages` in the Cloudflare dashboard once; without it the bootstrap below fails with "You need a workers.dev subdomain". The subdomain becomes part of your OpenSEO URL.
 - **A DataForSEO account** — see [`DATAFORSEO_API_KEY.md`](./DATAFORSEO_API_KEY.md).
 
-## 1) Clone your OpenSEO repo
+## 1) Clone this repository
 
-Fork `every-app/open-seo` on GitHub if you want a repo you control, then clone it locally:
-
-```bash
-git clone https://github.com/YOUR_GITHUB_USER/open-seo.git
-cd open-seo
-corepack enable
-pnpm install
-```
-
-If you do not need a fork, clone the upstream repo instead:
+Clone Transformaiton.com's copy. The upstream project, if you want the unmodified original, is [every-app/open-seo](https://github.com/every-app/open-seo).
 
 ```bash
-git clone https://github.com/every-app/open-seo.git
+git clone https://github.com/Transformaiton/open-seo.git
 cd open-seo
 corepack enable
 pnpm install
@@ -73,7 +66,7 @@ Invite them from Team settings. The app copies an invitation link; the invited a
 
 ## Connecting MCP clients
 
-MCP clients connect to `https://YOUR_WORKER_HOSTNAME/mcp` and sign in with your OpenSEO account, the same way they connect to the hosted service. Follow the [MCP setup guide](https://openseo.so/docs/mcp) with your Worker URL in place of the hosted one.
+MCP clients connect to `https://YOUR_WORKER_HOSTNAME/mcp` and sign in with an account on this installation. See [Usage](./USAGE.md#connect-an-ai-assistant). Nothing extra has to be turned on in Cloudflare for password accounts.
 
 ## Use your own domain
 
